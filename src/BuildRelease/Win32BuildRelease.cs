@@ -618,16 +618,20 @@ namespace BuildRelease
 		}
 
 		// Command execution
-		public static void ExecCommand(string exe, string arg)
+        public static void ExecCommand(string exe, string arg, bool shell_execute = false, bool no_stdout = false)
 		{
-			ExecCommand(exe, arg, false);
-		}
-		public static void ExecCommand(string exe, string arg, bool shell_execute)
-		{
+            string outputStr = "";
+
 			Process p = new Process();
 			p.StartInfo.FileName = exe;
 			p.StartInfo.Arguments = arg;
 			p.StartInfo.UseShellExecute = shell_execute;
+
+            if (no_stdout)
+            {
+                p.StartInfo.RedirectStandardError = true;
+                p.StartInfo.RedirectStandardOutput = true;
+            }
 
 			if (shell_execute)
 			{
@@ -640,10 +644,17 @@ namespace BuildRelease
 
 			p.WaitForExit();
 
+            if (no_stdout)
+            {
+                string s1 = p.StandardOutput.ReadToEnd();
+                string s2 = p.StandardError.ReadToEnd();
+                outputStr = "---\r\n" + s1 + "\r\n" + s2 + "\r\n---\r\n";
+            }
+
 			int ret = p.ExitCode;
 			if (ret != 0)
 			{
-				throw new ApplicationException(string.Format("Child process '{0}' returned error code {1}.", exe, ret));
+                throw new ApplicationException(string.Format("Child process '{0}' returned error code {1}.\r\n{2}", exe, ret, outputStr));
 			}
 
 			Kernel.SleepThread(50);

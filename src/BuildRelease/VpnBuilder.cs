@@ -203,12 +203,12 @@ namespace BuildRelease
 
 			switch (soft)
 			{
-				case Software.Thin_Telework_Server_and_Client_Full:
-					ret = "Thin Telework System";
+				case Software.Oss_Thin_Telework_Server_and_Client_Full:
+					ret = "Thin Telework System Open Source Version";
 					break;
 
-				case Software.Thin_Telework_Server_and_Client_ShareDisabled:
-					ret = "Thin Telework System (No Sharing Function)";
+				case Software.Oss_Thin_Telework_Server_and_Client_ShareDisabled:
+					ret = "Thin Telework System Open Source Version (No Sharing Function)";
 					break;
 
 				default:
@@ -225,12 +225,12 @@ namespace BuildRelease
 
 			switch (soft)
 			{
-				case Software.Thin_Telework_Server_and_Client_Full:
-					ret = "Thin Telework System";
+				case Software.Oss_Thin_Telework_Server_and_Client_Full:
+					ret = "Thin Telework System Open Source Version";
 					break;
 
-				case Software.Thin_Telework_Server_and_Client_ShareDisabled:
-					ret = "Thin Telework System (No Sharing Function)";
+				case Software.Oss_Thin_Telework_Server_and_Client_ShareDisabled:
+					ret = "Thin Telework System Open Source Version (No Sharing Function)";
 					break;
 
 				default:
@@ -259,8 +259,8 @@ namespace BuildRelease
 		public static readonly string UltraBuildFilesDirName = IO.NormalizePath(Path.Combine(UltraBaseDirName, "BuildFiles"));
 
 		public static readonly string VisualStudioSolutionFileName;
-		public static readonly string DebugSnapshotBaseDir = @"S:\NTTVPN\DebugFilesSnapshot";
-		public static readonly string ReleaseDestDir = @"s:\NTTVPN\Releases";
+		public static readonly string DebugSnapshotBaseDir = @"S:\NTTVPN\DebugFilesSnapshot_OSS";
+		public static readonly string ReleaseDestDir = @"s:\NTTVPN\Releases_OSS";
 		public const string Prefix = "";
 
 		public static readonly string ReleaseDestDir_SEVPN = @"s:\NTTVPN\Releases_SEVPN";

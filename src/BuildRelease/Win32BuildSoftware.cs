@@ -128,7 +128,7 @@ namespace BuildRelease
 		{
 			string outFileName = Path.Combine(Paths.ReleaseDir, this.OutputFileName);
 
-			string vpnsetup_exe = Path.Combine(Paths.SolutionBinDirName, "ThinSetup.exe");
+			string vpnsetup_exe = Path.Combine(Paths.SolutionBinDirName, Vars.APP_ID_PREFIX + "ThinSetup.exe");
 
 			try
 			{
