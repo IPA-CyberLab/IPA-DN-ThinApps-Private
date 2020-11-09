@@ -2,20 +2,26 @@
 #
 #
 
-$APPFULL$                   NTT East - IPA Thin Telework System
-$APPFULL_SERVER$            NTT East - IPA Thin Telework System Server
-$APPFULL_CLIENT$            NTT East - IPA Thin Telework System Client
+$APPFULL$                   Thin Telework System (Open Source Version)
+$APPFULL_SERVER$            Thin Telework System Server (Open Source Version)
+$APPFULL_CLIENT$            Thin Telework System Client (Open Source Version)
 
-$APPSHORT$                  Thin Telework System
-$APPSHORT_SERVER$           Thin Telework System Server
-$APPSHORT_CLIENT$           Thin Telework System Client
+$APPSHORT$                  Thin Telework System (OSS)
+$APPSHORT_SERVER$           Thin Telework System Server (OSS)
+$APPSHORT_CLIENT$           Thin Telework System Client (OSS)
 
-$APPVERYSHORT$              Thin Telework
-$APPVERYSHORT_SERVER$       Thin Telework Server
-$APPVERYSHORT_CLIENT$       Thin Telework Client
+$APPVERYSHORT$              Thin Telework OSS
+$APPVERYSHORT_SERVER$       Thin Telework OSS Server
+$APPVERYSHORT_CLIENT$       Thin Telework OSS Client
 
-$APPSHORT_EN$               Thin Telework System
+$APPSHORT_EN$               Thin Telework System Open Source Version
 
-$APP_ID_PREFIX$				
+$APP_ID_PREFIX$				OPEN
 
+
+
+SE_COMPANY_URL			http://telework.cyber.ipa.go.jp/
+
+SW_UNINSTALLINFO_URL						https://telework.cyber.ipa.go.jp/
+SW_UNINSTALLINFO_PUBLISHER					IPA
 

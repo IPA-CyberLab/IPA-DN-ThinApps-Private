@@ -2,20 +2,27 @@
 #
 #
 
-$APPFULL$                   NTT 東日本 - IPA シン・テレワークシステム
-$APPFULL_SERVER$            NTT 東日本 - IPA シン・テレワークシステム サーバー
-$APPFULL_CLIENT$            NTT 東日本 - IPA シン・テレワークシステム クライアント
+$APPFULL$                   シン・テレワークシステム (オープンソース版)
+$APPFULL_SERVER$            シン・テレワークシステム サーバー (オープンソース版)
+$APPFULL_CLIENT$            シン・テレワークシステム クライアント (オープンソース版)
 
-$APPSHORT$                  シン・テレワークシステム
-$APPSHORT_SERVER$           シン・テレワークシステム サーバー
-$APPSHORT_CLIENT$           シン・テレワークシステム クライアント
+$APPSHORT$                  シン・テレワークシステム (OSS 版)
+$APPSHORT_SERVER$           シン・テレワークシステム サーバー (OSS 版)
+$APPSHORT_CLIENT$           シン・テレワークシステム クライアント (OSS 版)
 
-$APPVERYSHORT$              シン・テレワーク
-$APPVERYSHORT_SERVER$       シン・テレワーク サーバー
-$APPVERYSHORT_CLIENT$       シン・テレワーク クライアント
+$APPVERYSHORT$              シン・テレワーク OSS
+$APPVERYSHORT_SERVER$       シン・テレワーク OSS サーバー
+$APPVERYSHORT_CLIENT$       シン・テレワーク OSS クライアント
 
-$APPSHORT_EN$               Thin Telework System
+$APPSHORT_EN$               Thin Telework System Open Source Version
 
-$APP_ID_PREFIX$				
+$APP_ID_PREFIX$				OPEN
+
+
+SE_COMPANY_URL			http://telework.cyber.ipa.go.jp/
+
+SW_UNINSTALLINFO_URL						https://telework.cyber.ipa.go.jp/
+SW_UNINSTALLINFO_PUBLISHER					独立行政法人 情報処理推進機構 (IPA)
+
 
 
