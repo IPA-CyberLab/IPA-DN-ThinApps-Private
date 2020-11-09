@@ -1,0 +1,21 @@
+﻿#
+#
+#
+
+$APPFULL$                   NTT 東日本 - IPA シン・テレワークシステム
+$APPFULL_SERVER$            NTT 東日本 - IPA シン・テレワークシステム サーバー
+$APPFULL_CLIENT$            NTT 東日本 - IPA シン・テレワークシステム クライアント
+
+$APPSHORT$                  シン・テレワークシステム
+$APPSHORT_SERVER$           シン・テレワークシステム サーバー
+$APPSHORT_CLIENT$           シン・テレワークシステム クライアント
+
+$APPVERYSHORT$              シン・テレワーク
+$APPVERYSHORT_SERVER$       シン・テレワーク サーバー
+$APPVERYSHORT_CLIENT$       シン・テレワーク クライアント
+
+$APPSHORT_EN$               Thin Telework System
+
+$APP_ID_PREFIX$				
+
+

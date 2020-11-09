@@ -1,0 +1,21 @@
+﻿#
+#
+#
+
+$APPFULL$                   NTT East - IPA Thin Telework System
+$APPFULL_SERVER$            NTT East - IPA Thin Telework System Server
+$APPFULL_CLIENT$            NTT East - IPA Thin Telework System Client
+
+$APPSHORT$                  Thin Telework System
+$APPSHORT_SERVER$           Thin Telework System Server
+$APPSHORT_CLIENT$           Thin Telework System Client
+
+$APPVERYSHORT$              Thin Telework
+$APPVERYSHORT_SERVER$       Thin Telework Server
+$APPVERYSHORT_CLIENT$       Thin Telework Client
+
+$APPSHORT_EN$               Thin Telework System
+
+$APP_ID_PREFIX$				
+
+
