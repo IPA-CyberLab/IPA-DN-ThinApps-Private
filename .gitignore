@@ -104,3 +104,4 @@ mayaqua.key
 /src/bin/.VPN-*
 
 /src/bin/hamcore/*ThinSetup_nosign.exe
+/src/bin/MachineDatabase.dat
