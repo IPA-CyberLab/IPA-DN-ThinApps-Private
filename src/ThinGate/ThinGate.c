@@ -99,7 +99,7 @@ void StartProcess()
 // プロセス終了関数
 void StopProcess()
 {
-	WideGateStop(wide);
+	WideGateStopEx(wide, true);
 	wide = NULL;
 
 	// サーバーの停止

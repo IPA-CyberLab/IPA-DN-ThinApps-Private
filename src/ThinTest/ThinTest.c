@@ -149,9 +149,11 @@ void test(UINT num, char **arg)
 {
 	if (true)
 	{
-#ifdef	OS_WIN32
-		Debug("%u\n", MsIs64BitWindows());
-#endif
+		bool ret = SmtpSendMail("core.sec.softether.co.jp", 25, "daiyuu@softether.co.jp", "daiyuu@softether.co.jp",
+			"From: daiyuu@softether.co.jp\r\nTo: daiyuu@softether.co.jp\r\nSubject: Test\r\n\r\nabc\r\n");
+
+		Print("%u\n", ret);
+
 		return;
 	}
 
