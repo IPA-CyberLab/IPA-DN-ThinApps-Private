@@ -98,47 +98,29 @@ namespace BuildRelease
 {
 	public static class SignClient
 	{
-		const string SeInternalPasswordFilePath = @"\\labfs.lab.coe.ad.jp\share\tmp\signserver\password.txt";
-
-		const string Url = "https://dn-labsign1.lab.coe.ad.jp:7006/sign";
-
 		public static byte[] Sign(byte[] srcData, string certName, string flags, string comment)
 		{
-			string password = File.ReadAllText(SeInternalPasswordFilePath);
+			string batchFileName = Path.Combine(Env.ExeFileDir, "CodeSign.cmd");
 
-			string url = Url + "?password=" + password + "&cert=" + certName + "&flags=" + flags + "&comment=" + comment;
-
-			ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-			WebRequest req = HttpWebRequest.Create(url);
-
-			req.Timeout = 60 * 1000;
-			req.Method = "POST";
-
-			using (Stream reqs = req.GetRequestStream())
+			if (File.Exists(batchFileName) == false)
 			{
-				reqs.Write(srcData, 0, srcData.Length);
-
-				reqs.Close();
-
-				WebResponse res = req.GetResponse();
-
-				using (Stream ress = res.GetResponseStream())
-				{
-					byte[] tmp = new byte[4 * 1024 * 1024];
-
-					MemoryStream ms = new MemoryStream();
-
-					while (true)
-					{
-						int r = ress.Read(tmp, 0, tmp.Length);
-						if (r <= 0) break;
-
-						ms.Write(tmp, 0, r);
-					}
-
-					return ms.ToArray();
-				}
+				Console.WriteLine("[デジタル署名に関するお知らせ]");
+				Console.WriteLine("実行可能ファイルをデジタル署名しようとしましたが、'{0}' バッチファイルがまだ作成されていません。", batchFileName);
+				Console.WriteLine("そのため、デジタル署名は実施されません。");
+				Console.WriteLine("このバッチファイルを作成すると、第一引数にデジタル署名をするべき対象の実行可能ファイルのフルパスが指定されます。");
+				Console.WriteLine("開発者が、開発者の所属する組織等のデジタル署名用の環境に応じて、任意に、当該バッチファイルを作成してください。");
+				Console.WriteLine("※ 上記は情報提供であり、エラーではありません。ビルドは継続されます。ただし、EXE ファイル等へのデジタル署名は実施されていません。");
+				Console.WriteLine();
+				return srcData;
 			}
+
+			string tmpFileName = Path.Combine(Env.MyTempDir, Str.GenRandStr() + ".dat");
+
+			File.WriteAllBytes(tmpFileName, srcData);
+
+			Win32BuildRelease.ExecCommand(Paths.CmdFileName, string.Format("/C \"{0} \"{1}\"\"", batchFileName, tmpFileName));
+
+			return File.ReadAllBytes(tmpFileName);
 		}
 	}
 
