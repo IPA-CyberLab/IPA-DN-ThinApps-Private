@@ -259,11 +259,9 @@ namespace BuildRelease
 		public static readonly string UltraBuildFilesDirName = IO.NormalizePath(Path.Combine(UltraBaseDirName, "BuildFiles"));
 
 		public static readonly string VisualStudioSolutionFileName;
-		public static readonly string DebugSnapshotBaseDir = @"S:\NTTVPN\DebugFilesSnapshot_OSS";
-		public static readonly string ReleaseDestDir = @"s:\NTTVPN\Releases_OSS";
+		//public static readonly string DebugSnapshotBaseDir;
+		public static readonly string ReleaseDestDir;
 		public const string Prefix = "";
-
-		public static readonly string ReleaseDestDir_SEVPN = @"s:\NTTVPN\Releases_SEVPN";
 
 		public static readonly string BuildHamcoreFilesDirName = Path.Combine(SolutionBinDirName, "BuiltHamcoreFiles");
 		//public static readonly string VisualStudioVCDir;
@@ -287,8 +285,6 @@ namespace BuildRelease
         public static readonly string MicrosoftSDKBinDir;
         public static readonly string MakeCatFilename;
 		public static readonly string RcFilename;
-		public static readonly string SoftEtherBuildDir = Env.SystemDir.Substring(0, 2) + @"\tmp\softether_build_dir";
-		public static readonly string OpenSourceDestDir = Env.SystemDir.Substring(0, 2) + @"\tmp\softether_oss_dest_dir";
 
 		public static readonly int MsBuildMaxCpu = 8;
 
@@ -377,6 +373,10 @@ namespace BuildRelease
 			{
 				Directory.CreateDirectory(Paths.TmpDirName);
 			}
+
+			// Output dir
+			string outputDir = Path.Combine(SolutionBaseDirName, @"..\win32_outputs");
+			ReleaseDestDir = outputDir;
 		}
 
 		// Visual Studio 2019 の「VsDevCmd.bat」ファイルのパスを取得する

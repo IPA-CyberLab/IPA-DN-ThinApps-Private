@@ -574,7 +574,7 @@ namespace BuildRelease
 			Win32BuildRelease.BuildMain();
 			Win32BuildRelease.SignAllBinaryFiles();
 			HamCoreBuildRelease.BuildHamcore();
-			Win32BuildRelease.CopyDebugSnapshot();
+			//Win32BuildRelease.CopyDebugSnapshot();
 
 			return 0;
 		}

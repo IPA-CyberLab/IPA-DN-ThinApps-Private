@@ -472,104 +472,104 @@ namespace BuildRelease
 			}
 		}
 
-		// Get the DebugSnapshot directory name
-		public static string GetDebugSnapstotDirName()
-		{
-			return Path.Combine(Paths.DebugSnapshotBaseDir, Str.DateTimeToStrShort(BuildSoftwareList.ListCreatedDateTime));
-		}
+		//// Get the DebugSnapshot directory name
+		//public static string GetDebugSnapstotDirName()
+		//{
+		//	return Path.Combine(Paths.DebugSnapshotBaseDir, Str.DateTimeToStrShort(BuildSoftwareList.ListCreatedDateTime));
+		//}
 
-		// Copy DebugSnapshot
-		public static void CopyDebugSnapshot()
-		{
-			string snapDir = GetDebugSnapstotDirName();
+		//// Copy DebugSnapshot
+		//public static void CopyDebugSnapshot()
+		//{
+		//	string snapDir = GetDebugSnapstotDirName();
 
-			CopyDebugSnapshot(snapDir);
-		}
-		public static void CopyDebugSnapshot(string snapDir, params string[] exclude_exts)
-		{
-			IO.CopyDir(Path.Combine(Paths.SolutionBaseDirName, @"..\"), snapDir,
-				delegate(FileInfo fi)
-				{
-					string srcPath = fi.FullName;
-					string[] exts_default =
-					{
-						".ncb", ".aps", ".suo", ".old", ".scc", ".vssscc", ".vspscc", ".cache", ".psess", ".tmp", ".dmp",
-					};
+		//	CopyDebugSnapshot(snapDir);
+		//}
+		//public static void CopyDebugSnapshot(string snapDir, params string[] exclude_exts)
+		//{
+		//	IO.CopyDir(Path.Combine(Paths.SolutionBaseDirName, @"..\"), snapDir,
+		//		delegate(FileInfo fi)
+		//		{
+		//			string srcPath = fi.FullName;
+		//			string[] exts_default =
+		//			{
+		//				".ncb", ".aps", ".suo", ".old", ".scc", ".vssscc", ".vspscc", ".cache", ".psess", ".tmp", ".dmp",
+		//			};
 
-					List<string> exts = new List<string>();
+		//			List<string> exts = new List<string>();
 
-					foreach (string ext in exts_default)
-					{
-						exts.Add(ext);
-					}
+		//			foreach (string ext in exts_default)
+		//			{
+		//				exts.Add(ext);
+		//			}
 
-					foreach (string ext in exclude_exts)
-					{
-						exts.Add(ext);
-					}
+		//			foreach (string ext in exclude_exts)
+		//			{
+		//				exts.Add(ext);
+		//			}
 
-                    if (Str.InStr(srcPath, @"\.vs\", false))
-                    {
-                        return false;
-                    }
+  //                  if (Str.InStr(srcPath, @"\.vs\", false))
+  //                  {
+  //                      return false;
+  //                  }
 
-                    if (Str.InStr(srcPath, @"\.git\", false))
-                    {
-                        return false;
-                    }
+  //                  if (Str.InStr(srcPath, @"\.git\", false))
+  //                  {
+  //                      return false;
+  //                  }
 
-                    if (Str.InStr(srcPath, @"\.svn\", false))
-					{
-						return false;
-					}
+  //                  if (Str.InStr(srcPath, @"\.svn\", false))
+		//			{
+		//				return false;
+		//			}
 
-					if (Str.InStr(srcPath.Substring(3), @"\tmp\", false))
-					{
-						return false;
-					}
+		//			if (Str.InStr(srcPath.Substring(3), @"\tmp\", false))
+		//			{
+		//				return false;
+		//			}
 
-					if (Str.InStr(srcPath, @"_log\", false))
-					{
-						return false;
-					}
+		//			if (Str.InStr(srcPath, @"_log\", false))
+		//			{
+		//				return false;
+		//			}
 
-					if (Str.InStr(srcPath, @"\backup.vpn_", false))
-					{
-						return false;
-					}
+		//			if (Str.InStr(srcPath, @"\backup.vpn_", false))
+		//			{
+		//				return false;
+		//			}
 
-					if (Str.InStr(srcPath, @"\node_modules\", false))
-					{
-						return false;
-					}
+		//			if (Str.InStr(srcPath, @"\node_modules\", false))
+		//			{
+		//				return false;
+		//			}
 
-					if (Str.InStr(srcPath, @"\wwwroot\", false))
-					{
-						return true;
-					}
+		//			if (Str.InStr(srcPath, @"\wwwroot\", false))
+		//			{
+		//				return true;
+		//			}
 
-					foreach (string ext in exts)
-					{
-						if (srcPath.EndsWith(ext, StringComparison.InvariantCultureIgnoreCase))
-						{
-							return false;
-						}
-					}
+		//			foreach (string ext in exts)
+		//			{
+		//				if (srcPath.EndsWith(ext, StringComparison.InvariantCultureIgnoreCase))
+		//				{
+		//					return false;
+		//				}
+		//			}
 
-					if (Str.InStr(srcPath, @"\hamcore\", false))
-					{
-						return true;
-					}
+		//			if (Str.InStr(srcPath, @"\hamcore\", false))
+		//			{
+		//				return true;
+		//			}
 
-					if (Str.InStr(srcPath, @"\hamcore_", false))
-					{
-						return true;
-					}
+		//			if (Str.InStr(srcPath, @"\hamcore_", false))
+		//			{
+		//				return true;
+		//			}
 
-					return true;
-				},
-				false, true, false, false);
-		}
+		//			return true;
+		//		},
+		//		false, true, false, false);
+		//}
 
 		// Execute building in Visual Studio
 		public static void BuildMain()
