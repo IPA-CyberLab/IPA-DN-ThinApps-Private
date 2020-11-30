@@ -236,10 +236,6 @@ namespace BuildRelease
 				default:
 					throw new ApplicationException("invalid soft.");
 			}
-			
-#if BU_SOFTETHER
-			ret = Str.ReplaceStr(ret, "PacketiX", "SoftEther", false);
-#endif
 
 			return ret;
 		}
@@ -277,7 +273,6 @@ namespace BuildRelease
 		public static readonly string ReleaseDir = Path.Combine(SolutionBaseDirName, @"tmp\Release");
 		public static readonly string ReleaseSrckitDir = Path.Combine(SolutionBaseDirName, @"tmp\ReleaseSrcKit");
 		public static readonly string StringsDir = Path.Combine(SolutionBaseDirName, @"BuildFiles\Strings");
-		public static readonly string CrossCompilerBaseDir = @"S:\CommomDev\xc";
 		public static readonly string UnixInstallScript = Path.Combine(SolutionBaseDirName, @"BuildFiles\UnixFiles\InstallScript.txt");
 		public static readonly string OssCommentsFile = Path.Combine(StringsDir, "OssComments.txt");
 		public static readonly string AutorunSrcDir = IO.NormalizePath(Path.Combine(SolutionBaseDirName, @"..\Autorun"));
@@ -285,7 +280,7 @@ namespace BuildRelease
         public static readonly string MicrosoftSDKBinDir;
         public static readonly string MakeCatFilename;
 		public static readonly string RcFilename;
-
+		
 		public static readonly int MsBuildMaxCpu = 8;
 
 		// Initialize

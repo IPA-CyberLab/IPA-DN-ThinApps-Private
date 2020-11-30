@@ -149,7 +149,7 @@ namespace BuildRelease
 			{
 				if (this.BuildSrcKit(SrcKitDefaultDir, debugMode))
 				{
-					this.BuildWithCrossCompiler(SrcKitDefaultDir);
+					//this.BuildWithCrossCompiler(SrcKitDefaultDir);
 				}
 			}
 			finally
@@ -328,63 +328,63 @@ namespace BuildRelease
 			Con.WriteLine("Finished.");
 		}
 
-		// Build by cross-compiler
-		public virtual void BuildWithCrossCompiler(string baseOutputDir)
-		{
-			// Create a batch file
-			string outDir = Path.Combine(baseOutputDir, this.CrossLibName);
-			string outSrcDir = Path.Combine(outDir, "src");
+		//// Build by cross-compiler
+		//public virtual void BuildWithCrossCompiler(string baseOutputDir)
+		//{
+		//	// Create a batch file
+		//	string outDir = Path.Combine(baseOutputDir, this.CrossLibName);
+		//	string outSrcDir = Path.Combine(outDir, "src");
 
-			try
-			{
-				string xcDir = Path.Combine(Path.Combine(Paths.CrossCompilerBaseDir, this.CrossCompilerName), "bin");
+		//	try
+		//	{
+		//		string xcDir = Path.Combine(Path.Combine(Paths.CrossCompilerBaseDir, this.CrossCompilerName), "bin");
 
-				if (Directory.Exists(xcDir) == false)
-				{
-					throw new ApplicationException(string.Format("dir '{0}' not found.", xcDir));
-				}
+		//		if (Directory.Exists(xcDir) == false)
+		//		{
+		//			throw new ApplicationException(string.Format("dir '{0}' not found.", xcDir));
+		//		}
 
-				string batFileName = Path.Combine(outSrcDir, "cross_build.cmd");
-				StreamWriter w = new StreamWriter(batFileName, false, Str.ShiftJisEncoding);
-				w.WriteLine("SET PATH={0};%PATH%", xcDir);
-				w.WriteLine();
-				w.WriteLine(outSrcDir.Substring(0, 2));
-				w.WriteLine("CD {0}", outSrcDir);
-				w.WriteLine();
-				w.WriteLine("make clean");
-				w.WriteLine("make");
-				w.WriteLine();
-				w.WriteLine("EXIT /B %ERRORLEVEL%");
-				w.Close();
+		//		string batFileName = Path.Combine(outSrcDir, "cross_build.cmd");
+		//		StreamWriter w = new StreamWriter(batFileName, false, Str.ShiftJisEncoding);
+		//		w.WriteLine("SET PATH={0};%PATH%", xcDir);
+		//		w.WriteLine();
+		//		w.WriteLine(outSrcDir.Substring(0, 2));
+		//		w.WriteLine("CD {0}", outSrcDir);
+		//		w.WriteLine();
+		//		w.WriteLine("make clean");
+		//		w.WriteLine("make");
+		//		w.WriteLine();
+		//		w.WriteLine("EXIT /B %ERRORLEVEL%");
+		//		w.Close();
 
-				Semaphore sem = new Semaphore(BuildConfig.NumMultipleCompileTasks, BuildConfig.NumMultipleCompileTasks, "vpn_build_cross");
-				Con.WriteLine("Waiting for Semaphore...");
-				sem.WaitOne();
-				Con.WriteLine("Done.");
-				try
-				{
-					Win32BuildRelease.ExecCommand(Paths.CmdFileName, string.Format("/C \"{0}\"", batFileName));
-				}
-				finally
-				{
-					sem.Release();
-				}
-			}
-			catch
-			{
-				string[] files = Directory.GetFiles(Path.Combine(outSrcDir, "code"), "*.a", SearchOption.AllDirectories);
-				foreach (string file in files)
-				{
-					try
-					{
-						File.Delete(file);
-					}
-					catch
-					{
-					}
-				}
-			}
-		}
+		//		Semaphore sem = new Semaphore(BuildConfig.NumMultipleCompileTasks, BuildConfig.NumMultipleCompileTasks, "vpn_build_cross");
+		//		Con.WriteLine("Waiting for Semaphore...");
+		//		sem.WaitOne();
+		//		Con.WriteLine("Done.");
+		//		try
+		//		{
+		//			Win32BuildRelease.ExecCommand(Paths.CmdFileName, string.Format("/C \"{0}\"", batFileName));
+		//		}
+		//		finally
+		//		{
+		//			sem.Release();
+		//		}
+		//	}
+		//	catch
+		//	{
+		//		string[] files = Directory.GetFiles(Path.Combine(outSrcDir, "code"), "*.a", SearchOption.AllDirectories);
+		//		foreach (string file in files)
+		//		{
+		//			try
+		//			{
+		//				File.Delete(file);
+		//			}
+		//			catch
+		//			{
+		//			}
+		//		}
+		//	}
+		//}
 
 		// SrcKit file name
 		public string SrcKitFileName

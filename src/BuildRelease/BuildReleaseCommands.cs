@@ -164,11 +164,7 @@ namespace BuildRelease
 									name,
 									date.Year, date.Month, date.Day);
 
-			string destDirName = Path.Combine(Paths.ReleaseDestDir,
-				string.Format(@"{0}-{1}-{2}-{3}",
-					Str.DateToStrShort(BuildSoftwareList.ListCreatedDateTime),
-					baseName,
-					Env.MachineName, Env.UserName));
+			string destDirName = Paths.ReleaseDestDir;
 
 			string publicDir = Path.Combine(destDirName, "Public");
 
