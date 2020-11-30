@@ -15,10 +15,10 @@
 public static class Vars
 {
     // ココを書換えます
-    public static readonly string ProductName = "Thin Telework System Open Source Version by NTT-EAST and IPA";
+    public static readonly string ProductName = "Thin Telework System Private Version by NTT-EAST and IPA";
     public static readonly string CompanyName = "NTT-East and IPA Anti-Corona Virus Telework Special Project";
     public static readonly string Copyright = "Information-technology Promotion Agency, Nippon Telegraph and Telephone East Corporation, and all contributors. All rights reserved.";
-    public static readonly string APP_ID_PREFIX = "Open";
+    public static readonly string APP_ID_PREFIX = "Private";
 
     // おまけ
     public static readonly string DistibutionPackagePrefix = APP_ID_PREFIX + "_";

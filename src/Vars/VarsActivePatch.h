@@ -24,7 +24,7 @@ void Vars_ApplyActivePatch()
 	Vars_ActivePatch_AddBool("WtGateDisableTls1_1", true);
 
 	// Entrance 設定ファイルに記載がないときのゲートウェイ表示文字列
-	Vars_ActivePatch_AddStr("WtDefaultGatewaySystemName", "Thin Telework Open Source Version Sample Gateway");
+	Vars_ActivePatch_AddStr("WtDefaultGatewaySystemName", "Thin Telework Private Version Sample Gateway");
 
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");

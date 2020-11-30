@@ -14,16 +14,16 @@
 
 #include "VarsCurrentBuildInfo.h"
 
-#define APP_ID_PREFIX					"Open"
-#define APP_ID_PREFIX_UNICODE			L"Open"
+#define APP_ID_PREFIX					"Private"
+#define APP_ID_PREFIX_UNICODE			L"Private"
 
 #define DS_RPC_PORT						9825
 
-#define DESK_PUBLISHER_NAME_ANSI		"Thin Telework System Open Source Version"
+#define DESK_PUBLISHER_NAME_ANSI		"Thin Telework System Private Version"
 
-#define	DESK_PRODUCT_NAME_SUITE			"Thin Telework System Open Source Version"
-#define	DESK_PRODUCT_NAME_SUITE_UNICODE		L"Thin Telework System Open Source Version"
-#define DESK_PUBLISHER_NAME_UNICODE		L"Thin Telework System Open Source Version"
+#define	DESK_PRODUCT_NAME_SUITE			"Thin Telework System Private Version"
+#define	DESK_PRODUCT_NAME_SUITE_UNICODE		L"Thin Telework System Private Version"
+#define DESK_PUBLISHER_NAME_UNICODE		L"Thin Telework System Private Version"
 
 
 // 以下は必要に応じていじること

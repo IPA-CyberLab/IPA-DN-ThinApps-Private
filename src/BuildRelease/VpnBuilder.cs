@@ -203,12 +203,12 @@ namespace BuildRelease
 
 			switch (soft)
 			{
-				case Software.Oss_Thin_Telework_Server_and_Client_Full:
-					ret = "Thin Telework System Open Source Version";
+				case Software.Private_Thin_Telework_Server_and_Client_Full:
+					ret = "Thin Telework System Private Version";
 					break;
 
-				case Software.Oss_Thin_Telework_Server_and_Client_ShareDisabled:
-					ret = "Thin Telework System Open Source Version (No Sharing Function)";
+				case Software.Private_Thin_Telework_Server_and_Client_ShareDisabled:
+					ret = "Thin Telework System Private Version (No Sharing Function)";
 					break;
 
 				default:
@@ -225,11 +225,11 @@ namespace BuildRelease
 
 			switch (soft)
 			{
-				case Software.Oss_Thin_Telework_Server_and_Client_Full:
+				case Software.Private_Thin_Telework_Server_and_Client_Full:
 					ret = "Thin Telework System Open Source Version";
 					break;
 
-				case Software.Oss_Thin_Telework_Server_and_Client_ShareDisabled:
+				case Software.Private_Thin_Telework_Server_and_Client_ShareDisabled:
 					ret = "Thin Telework System Open Source Version (No Sharing Function)";
 					break;
 

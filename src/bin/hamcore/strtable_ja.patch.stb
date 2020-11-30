@@ -2,21 +2,21 @@
 #
 #
 
-$APPFULL$                   シン・テレワークシステム (オープンソース版)
-$APPFULL_SERVER$            シン・テレワークシステム サーバー (オープンソース版)
-$APPFULL_CLIENT$            シン・テレワークシステム クライアント (オープンソース版)
+$APPFULL$                   シン・テレワークシステム (プライベート版)
+$APPFULL_SERVER$            シン・テレワークシステム サーバー (プライベート版)
+$APPFULL_CLIENT$            シン・テレワークシステム クライアント (プライベート版)
 
-$APPSHORT$                  シン・テレワークシステム (OSS 版)
-$APPSHORT_SERVER$           シン・テレワークシステム サーバー (OSS 版)
-$APPSHORT_CLIENT$           シン・テレワークシステム クライアント (OSS 版)
+$APPSHORT$                  シン・テレワークシステム (プライベート版)
+$APPSHORT_SERVER$           シン・テレワークシステム サーバー (プライベート版)
+$APPSHORT_CLIENT$           シン・テレワークシステム クライアント (プライベート版)
 
-$APPVERYSHORT$              シン・テレワーク OSS
-$APPVERYSHORT_SERVER$       シン・テレワーク OSS サーバー
-$APPVERYSHORT_CLIENT$       シン・テレワーク OSS クライアント
+$APPVERYSHORT$              シン・テレワーク プライベート版
+$APPVERYSHORT_SERVER$       シン・テレワーク プライベート版 サーバー
+$APPVERYSHORT_CLIENT$       シン・テレワーク プライベート版 クライアント
 
-$APPSHORT_EN$               Thin Telework System Open Source Version
+$APPSHORT_EN$               Thin Telework System Private Version
 
-$APP_ID_PREFIX$				OPEN
+$APP_ID_PREFIX$				PRIVATE
 
 
 SE_COMPANY_URL			http://telework.cyber.ipa.go.jp/

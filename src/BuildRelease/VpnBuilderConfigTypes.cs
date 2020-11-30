@@ -139,8 +139,8 @@ namespace BuildRelease
     // Type of software
     public enum Software
     {
-        Oss_Thin_Telework_Server_and_Client_Full,
-        Oss_Thin_Telework_Server_and_Client_ShareDisabled,
+        Private_Thin_Telework_Server_and_Client_Full,
+        Private_Thin_Telework_Server_and_Client_ShareDisabled,
     }
 
     // Class to build the software

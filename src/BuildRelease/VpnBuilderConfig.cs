@@ -113,10 +113,10 @@ namespace BuildRelease
 
 		// ========== Windows ==========
 		public static readonly BuildSoftware oss_thin_telework_server_and_client_full_win32_x86x64_ja =
-			new BuildSoftwareWin32(Software.Oss_Thin_Telework_Server_and_Client_Full, 0, 0, "", CpuList.intel, OSList.Windows);
+			new BuildSoftwareWin32(Software.Private_Thin_Telework_Server_and_Client_Full, 0, 0, "", CpuList.intel, OSList.Windows);
 
 		public static readonly BuildSoftware oss_thin_telework_server_and_client_share_disabled_win32_x86x64_ja =
-			new BuildSoftwareWin32(Software.Oss_Thin_Telework_Server_and_Client_ShareDisabled, 0, 0, "", CpuList.intel, OSList.Windows);
+			new BuildSoftwareWin32(Software.Private_Thin_Telework_Server_and_Client_ShareDisabled, 0, 0, "", CpuList.intel, OSList.Windows);
 
 		static BuildSoftwareList()
 		{
