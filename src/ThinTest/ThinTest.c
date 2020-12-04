@@ -91,6 +91,34 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
+	char* str = CLEAN;
+
+	PACK* p = NewPack();
+	PACK* p2 = NewPack();
+
+	JSON_VALUE* j;
+	JSON_VALUE* j2;
+
+	PackAddStr(p2, "str2", "456");
+	PackAddStr(p2, "testtest", "Hello");
+
+	PackAddStr(p, "str1", "123");
+	PackAddInt64(p, "int1", 1234567812345678ULL);
+
+	j = PackToJsonEx(p, true);
+	j2 = PackToJsonEx(p2, true);
+
+	JsonSet(JsonValueGetObject(j), "subitem", j2);
+
+	str = JsonToStr(j);
+
+	Print("%s\n", str);
+
+	Free(str);
+
+	JsonFree(j);
+	FreePack(p);
+	FreePack(p2);
 }
 
 void gg(UINT num, char **arg)
@@ -130,6 +158,34 @@ void di(UINT num, char **arg)
 #ifdef	OS_WIN32
 	SWExec();
 #endif  // OS_WIN32
+}
+
+void stat_test(UINT num, char** arg)
+{
+	STATMAN* stat;
+	STATMAN_CONFIG cfg = CLEAN;
+
+	StrCpy(cfg.PostUrl, 0, "https://127.0.0.1/stat/");
+	
+	stat = NewStatMan(&cfg);
+
+	{
+		PACK* p = NewPack();
+
+		PackAddStr(p, "str1", "Hello2");
+
+		PackAddUniStr(p, "str2", L"World2");
+
+		PackAddInt64(p, "int1_total", 5);
+
+		StatManAddReport(stat, p);
+
+		FreePack(p);
+	}
+
+	GetLine(NULL, 0);
+
+	FreeStatMan(stat);
 }
 
 void ping_test(UINT num, char **arg)
@@ -245,6 +301,7 @@ TEST_LIST test_list[] =
 	{"dg", dg},
 	{"du", du},
 	{"di", di},
+	{"st", stat_test},
 	{"ping", ping_test},
 };
 
