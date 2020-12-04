@@ -26,6 +26,9 @@ void Vars_ApplyActivePatch()
 	// Entrance 設定ファイルに記載がないときのゲートウェイ表示文字列
 	Vars_ActivePatch_AddStr("WtDefaultGatewaySystemName", "Thin Telework Private Version Sample Gateway");
 
+	// 統計関係
+	Vars_ActivePatch_AddStr("WtGateStatSystemName", "thingate_private");
+
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
 	Vars_ActivePatch_AddBitmap(D_SW_PERFORM_BMP_ABOUTBOX, "AboutBox.bmp");
