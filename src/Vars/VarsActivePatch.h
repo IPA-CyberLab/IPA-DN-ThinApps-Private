@@ -29,6 +29,15 @@ void Vars_ApplyActivePatch()
 	// 統計関係
 	Vars_ActivePatch_AddStr("WtGateStatSystemName", "thingate_private");
 
+	// 完全閉域化ファイアウォール機能
+	// (0: 起動しない
+	//  1: 起動する (ユーザーは ON/OFF を選択できる)
+	//  2: 起動する (ユーザーは ON/OFF を選択できない。ユーザーが OFF にしようとすると接続を拒否する。
+	//              実行ユーザーが Administrators 権限を有していない場合は、ON にできないので、
+	//              接続ができなくなる。したがって、モード 2 は、実行ユーザーが確実に Administrators
+	//              権限を有している場合のみ利用すること)
+	Vars_ActivePatch_AddInt("ThinFwMode", 0);
+
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
 	Vars_ActivePatch_AddBitmap(D_SW_PERFORM_BMP_ABOUTBOX, "AboutBox.bmp");
