@@ -91,34 +91,6 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
-	char* str = CLEAN;
-
-	PACK* p = NewPack();
-	PACK* p2 = NewPack();
-
-	JSON_VALUE* j;
-	JSON_VALUE* j2;
-
-	PackAddStr(p2, "str2", "456");
-	PackAddStr(p2, "testtest", "Hello");
-
-	PackAddStr(p, "str1", "123");
-	PackAddInt64(p, "int1", 1234567812345678ULL);
-
-	j = PackToJsonEx(p, true);
-	j2 = PackToJsonEx(p2, true);
-
-	JsonSet(JsonValueGetObject(j), "subitem", j2);
-
-	str = JsonToStr(j);
-
-	Print("%s\n", str);
-
-	Free(str);
-
-	JsonFree(j);
-	FreePack(p);
-	FreePack(p2);
 }
 
 void gg(UINT num, char **arg)
