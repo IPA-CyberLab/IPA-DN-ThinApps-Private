@@ -18,6 +18,9 @@ void Vars_ApplyActivePatch();
 
 void Vars_ApplyActivePatch()
 {
+	// プライベート版かどうか
+	Vars_ActivePatch_AddBool("IsPrivateVersion", true);
+
 	// Gate における古いバージョンの SSL/TLS の禁止フラグ
 	Vars_ActivePatch_AddBool("WtGateDisableSsl3", true);
 	Vars_ActivePatch_AddBool("WtGateDisableTls1_0", true);
