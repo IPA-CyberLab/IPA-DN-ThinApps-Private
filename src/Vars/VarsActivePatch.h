@@ -33,7 +33,7 @@ void Vars_ApplyActivePatch()
 	Vars_ActivePatch_AddStr("WtGateStatSystemName", "thingate_private");
 
 	// 完全閉域化ファイアウォール機能 (クライアント側)
-	// サーバーの設定の如何にかかわらず、クライアント側で完全閉域化 FW を有効化する。
+	// サーバーのポリシー設定の如何にかかわらず、クライアント側で完全閉域化 FW を有効化する。
 	// (0: 起動しない
 	//  1: 起動する (ユーザーは ON/OFF を選択できる)
 	//  2: 起動する (ユーザーは ON/OFF を選択できない。ユーザーが OFF にしようとすると接続を拒否する。
@@ -44,6 +44,10 @@ void Vars_ApplyActivePatch()
 
 	// サーバーのみのインストーラをビルドする場合は、以下の設定値を true にすること。
 	Vars_ActivePatch_AddBool("ThinSetupServerOnly", false);
+
+	// ハイパースケール版のみ:
+	// SMS をサポートする場合は true (中継ゲートウェイ側 DB も設定する必要がある。詳しくはハイパースケール版ドキュメントを参照せよ)
+	Vars_ActivePatch_AddBool("ThinSupportSms", false);
 
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
