@@ -32,7 +32,8 @@ void Vars_ApplyActivePatch()
 	// 統計関係
 	Vars_ActivePatch_AddStr("WtGateStatSystemName", "thingate_private");
 
-	// 完全閉域化ファイアウォール機能
+	// 完全閉域化ファイアウォール機能 (クライアント側)
+	// サーバーの設定の如何にかかわらず、クライアント側で完全閉域化 FW を有効化する。
 	// (0: 起動しない
 	//  1: 起動する (ユーザーは ON/OFF を選択できる)
 	//  2: 起動する (ユーザーは ON/OFF を選択できない。ユーザーが OFF にしようとすると接続を拒否する。
