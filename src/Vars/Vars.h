@@ -30,7 +30,6 @@
 #define DESK_LOCALHOST_DUMMY_FQDN		"%s.secure.cyber.ipa.go.jp"
 #define	UPDATE_SERVER_URL_GLOBAL		"https://update-check.dynamic-ip.thin.cyber.ipa.go.jp/update/?family=%s&software=%s&mybuild=%u&lang=%s"
 
-
 // RDUP ポート番号変更
 #undef	DS_URDP_PORT
 #define DS_URDP_PORT					3459

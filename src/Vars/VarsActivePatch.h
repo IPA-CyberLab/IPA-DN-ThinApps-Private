@@ -41,6 +41,9 @@ void Vars_ApplyActivePatch()
 	//              権限を有している場合のみ利用すること)
 	Vars_ActivePatch_AddInt("ThinFwMode", 0);
 
+	// サーバーのみのインストーラをビルドする場合は、以下の設定値を true にすること。
+	Vars_ActivePatch_AddBool("ThinSetupServerOnly", false);
+
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
 	Vars_ActivePatch_AddBitmap(D_SW_PERFORM_BMP_ABOUTBOX, "AboutBox.bmp");
