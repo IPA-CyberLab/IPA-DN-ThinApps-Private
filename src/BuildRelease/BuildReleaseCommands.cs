@@ -739,7 +739,7 @@ namespace BuildRelease
 			string companyname = vl["COMPANYNAME"].StrValue;
 
 			Win32BuildRelease.GenerateVersionInfoResource(targetFilename, outFilename, vl["RC"].StrValue, product_name, postfix,
-				Paths.GetUltraSubmoduleCommitId(), copyright, companyname);
+				Paths.GetUltraSubmoduleCommitId(), copyright, companyname, Paths.GetUltraVersionLabel());
 
 			return 0;
 		}

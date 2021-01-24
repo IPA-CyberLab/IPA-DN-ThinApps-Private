@@ -100,8 +100,8 @@ namespace BuildRelease
 	public static class Win32BuildRelease
 	{
         // Generate a version information resource
-        public static void GenerateVersionInfoResource(string targetExeName, string outName, string rc_name, string product_name, string postfix, string commitId, string copyright, string companyName)
-        {
+        public static void GenerateVersionInfoResource(string targetExeName, string outName, string rc_name, string product_name, string postfix, string commitId, string copyright, string companyName, string verLabel)
+		{
             int build, version;
             string name;
             DateTime date;
@@ -123,7 +123,7 @@ namespace BuildRelease
 
             string exeFileName = Path.GetFileName(targetExeName);
 
-            exeFileName += " (Ultra: " + commitId + ")";
+            exeFileName += " (Ultra: " + verLabel + ", " + commitId + ")";
 
             if (Str.IsEmptyStr(product_name))
             {
@@ -187,8 +187,17 @@ namespace BuildRelease
 			File.Delete(txt);
 		}
 
-		// Increment the build number
-		public static void IncrementBuildNumber()
+        static string UpdateBuildName(string name)
+        {
+            string verLabel = Paths.GetUltraVersionLabel();
+            int i = name.IndexOf(".");
+            if (i == -1) return verLabel;
+
+            return verLabel + name.Substring(i);
+        }
+
+        // Increment the build number
+        public static void IncrementBuildNumber()
 		{
 			int build, version;
 			string name;
@@ -197,7 +206,9 @@ namespace BuildRelease
 			ReadBuildInfoFromTextFile(null, out build, out version, out name, out date);
 			build++;
 
-			WriteBuildInfoToTextFile(null, build, version, name, date);
+            name = UpdateBuildName(name);
+
+            WriteBuildInfoToTextFile(null, build, version, name, date);
 
 			SetNowDate();
 
@@ -213,7 +224,9 @@ namespace BuildRelease
 
             ReadBuildInfoFromTextFile(null, out build, out version, out name, out date);
 
-			date = DateTime.Now;
+            name = UpdateBuildName(name);
+
+            date = DateTime.Now;
 
 			WriteBuildInfoToTextFile(null, build, version, name, date);
 		}
@@ -312,11 +325,11 @@ namespace BuildRelease
 			string username = Env.UserName;
 			string pcname = Env.MachineName;
 
-			NormalizeSourceCode(build, version, username, pcname, date, Paths.GetUltraSubmoduleCommitId());
+			NormalizeSourceCode(build, version, username, pcname, date, Paths.GetUltraSubmoduleCommitId(), Paths.GetUltraVersionLabel());
 		}
 
 		// Apply build number, version number, user name, and PC name to the source code
-		public static void NormalizeSourceCode(int buildNumber, int version, string userName, string pcName, DateTime date, string commitId)
+		public static void NormalizeSourceCode(int buildNumber, int version, string userName, string pcName, DateTime date, string commitId, string verLabel)
 		{
 			DateTime now = date;
 			char[] seps = { '\t', ' ', };
@@ -435,6 +448,11 @@ namespace BuildRelease
                                     if (tokens[0].Equals("#define") && tokens[1].Equals("ULTRA_COMMIT_ID"))
                                     {
                                         newLine = line.Replace(tokens[2], "\"" + commitId + "\"");
+                                    }
+
+                                    if (tokens[0].Equals("#define") && tokens[1].Equals("ULTRA_VER_LABEL"))
+                                    {
+                                        newLine = line.Replace(tokens[2], "\"" + verLabel + "\"");
                                     }
                                 }
 
