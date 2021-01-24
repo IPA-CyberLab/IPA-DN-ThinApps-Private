@@ -193,7 +193,7 @@ namespace BuildRelease
             int i = name.IndexOf(".");
             if (i == -1) return verLabel;
 
-            return verLabel + name.Substring(i);
+            return name.Substring(0, i) + "." + verLabel;
         }
 
         // Increment the build number
