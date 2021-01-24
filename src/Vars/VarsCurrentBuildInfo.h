@@ -16,7 +16,7 @@
 #define	CEDAR_VER					18
 
 // Build Number
-#define	CEDAR_BUILD					9864
+#define	CEDAR_BUILD					9865
 
 // Specify the name of the person in charge building
 #ifndef	BUILDER_NAME
@@ -25,18 +25,18 @@
 
 // Specify the location to build
 #ifndef	BUILD_PLACE
-#define	BUILD_PLACE			"pc34"
+#define	BUILD_PLACE			"pc38"
 #endif	// BUILD_PLACE
 
 // Specifies the build date
 #define	BUILD_DATE_Y		2021
 #define	BUILD_DATE_M		1
 #define	BUILD_DATE_D		24
-#define	BUILD_DATE_HO		13
-#define	BUILD_DATE_MI		22
-#define	BUILD_DATE_SE		3
+#define	BUILD_DATE_HO		16
+#define	BUILD_DATE_MI		40
+#define	BUILD_DATE_SE		2
 
 // IPA-DN-Ultra library git commit id
-#define ULTRA_COMMIT_ID		"dbb707210f5682f219a2fc643aa4d2ed1325a74d"
+#define ULTRA_COMMIT_ID		"a9154192e6f4b7c2137fb845ea966ff7d0676e04"
 #define ULTRA_VER_LABEL		"beta7preview9"
 
