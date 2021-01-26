@@ -43,7 +43,14 @@ void Vars_ApplyActivePatch()
 	Vars_ActivePatch_AddInt("ThinFwMode", 0);
 
 	// サーバーのみのインストーラをビルドする場合は、以下の設定値を true にすること。
+	// なお、ThinSetupServerOnly と ThinSetupClientOnly はいずれか一方しか指定できない。
+	// 両方指定すると、全く意味のないインストーラが作成されてしまうので、注意すること。
 	Vars_ActivePatch_AddBool("ThinSetupServerOnly", false);
+
+	// クライアントのみのインストーラをビルドする場合は、以下の設定値を true にすること。
+	// なお、ThinSetupServerOnly と ThinSetupClientOnly はいずれか一方しか指定できない。
+	// 両方指定すると、全く意味のないインストーラが作成されてしまうので、注意すること。
+	Vars_ActivePatch_AddBool("ThinSetupClientOnly", false);
 
 	// ハイパースケール版のみ:
 	// SMS をサポートする場合は true (中継ゲートウェイ側 DB も設定する必要がある。詳しくはハイパースケール版ドキュメントを参照せよ)
