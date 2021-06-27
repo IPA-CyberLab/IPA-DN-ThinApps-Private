@@ -107,3 +107,4 @@ mayaqua.key
 /src/bin/MachineDatabase.config
 /src/bin/Statistics.db
 /src/bin/backup.Statistics.db
+/src/bin/websocket_certs_cache
