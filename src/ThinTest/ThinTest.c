@@ -91,6 +91,21 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
+	DsKillAllZombineGuacdProcesses(NULL);
+
+	DS_GUACD *g = DsStartGuacd(NULL);
+
+	if (g == NULL)
+	{
+		Debug("Error\n");
+		return;
+	}
+
+	Debug("OK sock = %u\n", g->Sock->socket);
+
+	GetLine(NULL, 0);
+
+	DsStopGuacd(NULL, g);
 }
 
 void gg(UINT num, char **arg)
