@@ -93,7 +93,7 @@ void test(UINT num, char **arg)
 {
 	DsKillAllZombineGuacdProcesses(NULL);
 
-	DS_GUACD *g = DsStartGuacd(NULL);
+	DS_GUACD *g = DsStartGuacd(NULL, 0);
 
 	if (g == NULL)
 	{
