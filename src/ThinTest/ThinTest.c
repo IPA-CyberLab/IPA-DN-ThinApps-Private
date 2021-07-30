@@ -271,6 +271,14 @@ void ping_test(UINT num, char **arg)
 #endif  // OS_WIN32
 }
 
+void unittest(UINT num, char** arg)
+{
+	// メモリリークが 1 バイトでも発生した場合、プロセス終了時に exit(1) する
+	MayaquaEnableExitCode1IfMemoryLeak();
+
+	// TODO: ユニットテストをここに書く！
+}
+
 // テスト関数一覧定義
 typedef void (TEST_PROC)(UINT num, char **arg);
 
@@ -283,6 +291,7 @@ typedef struct TEST_LIST
 TEST_LIST test_list[] =
 {
 	{"test", test},
+	{"unittest", unittest},
 	{"gg", gg},
 	{"ds", ds},
 	{"dg", dg},

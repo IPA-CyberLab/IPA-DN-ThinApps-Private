@@ -18,5 +18,5 @@ msbuild /target:Rebuild /property:Configuration=Debug "%BATCH_DIR_NAME%\BuildRel
 
 copy /y "%BATCH_DIR_NAME%\BuildRelease\bin\BuildReleaseTmp.exe" "%BATCH_DIR_NAME%\bin\BuildRelease.exe"
 
-cmd /k "%BATCH_DIR_NAME%\bin\BuildRelease.exe /CMD:All"
+cmd /k "%BATCH_DIR_NAME%\bin\BuildRelease.exe /CMD:All %1"
 
