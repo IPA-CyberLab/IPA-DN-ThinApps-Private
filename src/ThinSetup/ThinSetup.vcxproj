@@ -305,6 +305,21 @@ $(SolutionDir)bin\BuildTool.exe /CMD:FileCopy "$(TargetPath)" /DEST:"$(SolutionD
       <Project>{d11c227f-ae0e-4b8b-8d99-f9ea28ff3be8}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Cascade.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\deskclient.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\EasyInstaller.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Internet.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Language.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Machine.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Protocol.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\Switch.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\UserAdmin.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\VPN.ico" />
+    <Image Include="..\..\submodules\IPA-DN-Ultra\src\PenCore\VPNSvr.ico" />
+    <Image Include="App.ico" />
+    <Image Include="Installer.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 日本語 resources
+// 日本語 (日本) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
-#ifdef _WIN32
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 #pragma code_page(932)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -55,8 +53,11 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDI_SETUP_MAIN          ICON                    "App.ico"
+
 IDI_ICON12              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\deskclient.ico"
+
 IDI_ICON13              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\UserAdmin.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -64,7 +65,7 @@ IDI_ICON13              ICON                    "..\\..\\submodules\\IPA-DN-Ultr
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     10001, DIALOG
     BEGIN
@@ -72,6 +73,14 @@ BEGIN
         RIGHTMARGIN, 254
         TOPMARGIN, 7
         BOTTOMMARGIN, 68
+    END
+
+    10003, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -92,7 +101,33 @@ BEGIN
     DEFPUSHBUTTON   "キャンセル",IDCANCEL,195,52,59,16
 END
 
-#endif    // 日本語 resources
+10003 DIALOGEX 0, 0, 261, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Thin Telework System - Language Selection"
+FONT 9, "Arial", 400, 0, 0x0
+BEGIN
+    CONTROL         "&English",1001,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,67,49,10
+    CONTROL         "&Japanese",1002,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,83,49,10
+    DEFPUSHBUTTON   "&OK",IDCANCEL,195,102,59,14
+    ICON            IDI_ICON10,IDC_STATIC,7,7,18,17,WS_TABSTOP
+    LTEXT           "Select the display language. You can switch the language after installation.",IDC_STATIC,30,7,224,19
+    LTEXT           "NTT 東日本 - IPA 「シン・テレワークシステム」 は、国際通交の時代に対応するため、以下の表示言語のユーザーインターフェイスを搭載しています。お好みの言語を選択してください。インストール後は、「バージョン情報」画面から、いつでも言語を変更できます。",IDC_STATIC,30,29,224,37
+    LTEXT           "(英語)",IDC_STATIC,101,67,153,10
+    LTEXT           "(日本語)",IDC_STATIC,101,83,153,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+10003 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 日本語 (日本) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -100,10 +135,8 @@ END
 // 英語 (米国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -113,17 +146,29 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDI_SETUP_INTERNET      ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Internet.ico"
+
 IDI_SETUP_PROTOCOL      ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Protocol.ico"
+
 IDI_SETUP_SWITCH        ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Switch.ico"
+
 IDI_SETUP_MACHINE       ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Machine.ico"
+
 IDI_ICON4               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\VPNSvr.ico"
+
 IDI_ICON5               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\VPN.ico"
+
 IDI_ICON6               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Cascade.ico"
+
 IDI_ICON7               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\UserAdmin.ico"
+
 IDI_ICON8               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Internet.ico"
+
 IDI_ICON9               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Language.ico"
+
 IDI_ICON10              ICON                    "Installer.ico"
+
 IDI_ICON11              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\EasyInstaller.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -131,7 +176,7 @@ IDI_ICON11              ICON                    "..\\..\\submodules\\IPA-DN-Ultr
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     10002, DIALOG
     BEGIN
