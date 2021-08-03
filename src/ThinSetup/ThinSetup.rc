@@ -103,17 +103,18 @@ END
 
 10003 DIALOGEX 0, 0, 261, 124
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
-CAPTION "Language Selection"
+CAPTION "Thin Telework System - Language Selection"
 FONT 9, "Arial", 400, 0, 0x0
 BEGIN
     CONTROL         "&English",1001,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,67,49,10
     CONTROL         "&Japanese",1002,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,83,49,10
     DEFPUSHBUTTON   "&OK",IDCANCEL,195,102,59,14
-    ICON            IDI_ICON10,IDC_STATIC,7,7,18,17,WS_TABSTOP
     LTEXT           "Select the display language. You can switch the language after installation.",IDC_STATIC,30,7,224,19
     LTEXT           "以下の表示言語のユーザーインターフェイスを搭載しています。お好みの言語を選択してください。インストール後は、「バージョン情報」画面から、いつでも言語を変更できます。",IDC_STATIC,30,29,224,37
-    LTEXT           "(英語)",IDC_STATIC,101,67,153,10
-    LTEXT           "(日本語)",IDC_STATIC,101,83,153,10
+    LTEXT           "(英語)",IDC_STATIC,101,67,39,10
+    LTEXT           "(日本語)",IDC_STATIC,101,83,35,10
+    CONTROL         "",1986,"SysAnimate32",ACS_TRANSPARENT | WS_TABSTOP,207,66,34,22,WS_EX_TRANSPARENT
+    ICON            IDI_ICON10,IDC_STATIC,7,7,20,20,WS_TABSTOP
 END
 
 
@@ -126,6 +127,19 @@ END
 BEGIN
     0
 END
+
+10001 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+1985                    AVI                     "C:\\git\\IPA-DNP-ThinApps-Public\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Circle.avi"
 
 #endif    // 日本語 (日本) resources
 /////////////////////////////////////////////////////////////////////////////
@@ -202,6 +216,17 @@ BEGIN
     ICON            IDI_ICON10,IDC_STATIC,7,7,20,20,WS_TABSTOP
     LTEXT           "Preparing to install...",IDC_STATIC,33,7,189,20
     DEFPUSHBUTTON   "Cancel",IDCANCEL,195,54,59,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+10002 AFX_DIALOG_LAYOUT
+BEGIN
+    0
 END
 
 #endif    // 英語 (米国) resources
