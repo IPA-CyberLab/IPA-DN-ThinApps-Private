@@ -103,7 +103,7 @@ END
 
 10003 DIALOGEX 0, 0, 261, 124
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
-CAPTION "Thin Telework System - Language Selection"
+CAPTION "Language Selection"
 FONT 9, "Arial", 400, 0, 0x0
 BEGIN
     CONTROL         "&English",1001,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,48,67,49,10
