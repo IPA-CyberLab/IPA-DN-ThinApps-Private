@@ -24,6 +24,10 @@ SE_COMPANY_URL			http://telework.cyber.ipa.go.jp/
 SW_UNINSTALLINFO_URL						https://telework.cyber.ipa.go.jp/
 SW_UNINSTALLINFO_PUBLISHER					独立行政法人 情報処理推進機構 (IPA)
 
+$THINWEB_WEBPAGE_LINK$		https://telework.cyber.ipa.go.jp/
+$THINWEB_DOWNLOAD_LINK$		https://telework.cyber.ipa.go.jp/
+$THINWEB_WEBAPP_TOP_URL$	https://webapp.telework.cyber.ipa.go.jp/
+
 
 
 DS_MEMORY_MSG_1			このコンピュータの空き物理メモリ容量は、残り少なくなっています。空きメモリは、500MBytes 未満となっています。\r\n\r\n空きメモリが不足している状態で、このコンピュータの $APPFULL_SERVER$ にクライアントから接続すると、接続に失敗したり、「プロトコルエラー」が発生したり、接続後に画面が表示されなかったりする問題が発生する場合があります。\r\n\r\n$APPFULL_SERVER$ の稼働は継続できますが、確実な動作のためには、コンピュータのメモリ容量を増設することを検討してください。また、実際に利用中に上記のようなエラーが発生した場合は、速やかにメモリの増設をすることをお勧めします。(上記のエラーはメモリ不足のみで発生する訳ではありませんが、メモリ不足が 1 つの原因であることが判明しています。)\r\n

@@ -25,3 +25,7 @@ SE_COMPANY_URL			http://telework.cyber.ipa.go.jp/
 SW_UNINSTALLINFO_URL						https://telework.cyber.ipa.go.jp/
 SW_UNINSTALLINFO_PUBLISHER					IPA
 
+$THINWEB_WEBPAGE_LINK$		https://telework.cyber.ipa.go.jp/
+$THINWEB_DOWNLOAD_LINK$		https://telework.cyber.ipa.go.jp/
+$THINWEB_WEBAPP_TOP_URL$	https://webapp.telework.cyber.ipa.go.jp/
+
