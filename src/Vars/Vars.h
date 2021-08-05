@@ -28,7 +28,7 @@
 
 // 以下は必要に応じていじること
 #define DESK_LOCALHOST_DUMMY_FQDN		"%s.secure.cyber.ipa.go.jp"
-#define DESK_LOCALHOST_DUMMY_FQDN_V6	"%s.secure-v6.cyber.ipa.go.jp"
+#define DESK_LOCALHOST_DUMMY_FQDN_V6	"%s.secure6.cyber.ipa.go.jp"
 #define	UPDATE_SERVER_URL_GLOBAL		"https://update-check.dynamic-ip.thin.cyber.ipa.go.jp/update/?family=%s&software=%s&mybuild=%u&lang=%s"
 
 // URDP ポート番号変更
