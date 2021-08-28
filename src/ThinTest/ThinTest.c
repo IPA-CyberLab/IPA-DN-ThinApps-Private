@@ -97,12 +97,7 @@ void test(UINT num, char **arg)
 	StrCpy(t.CertKeySrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.key");
 	StrCpy(t.BasicAuthUsername, 0, "user123");
 	StrCpy(t.BasicAuthPassword, 0, "pass123");
-
-	CERTS_AND_KEY *c = DownloadCertsAndKeyFromCertServer(&t, NULL);
-
-	Debug("%p\n", c);
-
-	FreeCertsAndKey(c);
+	StrCpy(t.ManagerLogName, 0, "Nekosan");
 }
 
 void gg(UINT num, char **arg)
