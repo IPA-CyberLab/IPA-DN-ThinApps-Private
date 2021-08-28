@@ -91,21 +91,18 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
-	DsKillAllZombineGuacdProcesses(NULL);
+	CERT_SERVER_CLIENT_PARAM t = CLEAN;
 
-	DS_GUACD *g = DsStartGuacd(NULL, 0);
+	StrCpy(t.CertListSrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.cer");
+	StrCpy(t.CertKeySrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.key");
+	StrCpy(t.BasicAuthUsername, 0, "user123");
+	StrCpy(t.BasicAuthPassword, 0, "pass123");
 
-	if (g == NULL)
-	{
-		Debug("Error\n");
-		return;
-	}
+	CERTS_AND_KEY *c = DownloadCertsAndKeyFromCertServer(&t, NULL);
 
-	Debug("OK sock = %u\n", g->Sock->socket);
+	Debug("%p\n", c);
 
-	GetLine(NULL, 0);
-
-	DsStopGuacd(NULL, g);
+	FreeCertsAndKey(c);
 }
 
 void gg(UINT num, char **arg)
