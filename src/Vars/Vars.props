@@ -2,6 +2,10 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
+    <!-- シン・テレワークシステム プライベート版構築者向け TODO: -->
+    <!-- 以下の項目の Private の文字列は、必ず変更し、ユニーク化すること。 -->
+    <!-- 詳しくは、構築マニュアル「8-2. アプリケーションの ID (AppId) の変更によるユニーク化」を参照すること。 -->
+    <!-- この値は、Vars.h の APP_ID_PREFIX の文字列と一致させる必要がある。 -->
     <APP_ID_PREFIX>Private</APP_ID_PREFIX>
   </PropertyGroup>
   <PropertyGroup />
