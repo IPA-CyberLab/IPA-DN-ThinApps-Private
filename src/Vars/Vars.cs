@@ -4,6 +4,7 @@
 // https://www.apache.org/licenses/LICENSE-2.0
 // 
 // Copyright (c) IPA CyberLab of Industrial Cyber Security Center.
+// Copyright (c) NTT-East Impossible Telecom Mission Group.
 // Copyright (c) Daiyuu Nobori.
 // Copyright (c) SoftEther VPN Project, University of Tsukuba, Japan.
 // Copyright (c) SoftEther Corporation.
@@ -18,7 +19,7 @@ public static class Vars
     // 以下は、ソフトウェア中の表示文字列である。適宜書き換えること。
     public static readonly string ProductName = "Thin Telework System Private Version by NTT-EAST and IPA";
     public static readonly string CompanyName = "NTT-East and IPA Anti-Corona Virus Telework Special Project";
-    public static readonly string Copyright = "Information-technology Promotion Agency, Nippon Telegraph and Telephone East Corporation, and all contributors. All rights reserved.";
+    public static readonly string Copyright = "IPA CyberLab of Industrial Cyber Security Center, NTT-East Impossible Telecom Mission Group, and all contributors. All rights reserved.";
 
     // シン・テレワークシステム プライベート版構築者向け TODO:
     // 以下の項目の "Private" の文字列は、必ず変更し、ユニーク化すること。
