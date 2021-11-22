@@ -57,6 +57,9 @@ void Vars_ApplyActivePatch()
 	// SMS をサポートする場合は true (中継ゲートウェイ側 DB も設定する必要がある。詳しくはハイパースケール版ドキュメントを参照せよ)
 	Vars_ActivePatch_AddBool("ThinSupportSms", false);
 
+	// インストーラで言語選択画面を表示するかどうか
+	Vars_ActivePatch_AddBool("ThinSetupShowLanguageSelectionDialog", false);
+
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
 	Vars_ActivePatch_AddBitmap(D_SW_PERFORM_BMP_ABOUTBOX, "AboutBox.bmp");
