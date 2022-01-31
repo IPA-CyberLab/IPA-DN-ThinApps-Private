@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{DBFF7E80-F039-4D26-B993-F8B27AD6E236}</ProjectGuid>
     <RootNamespace>ThinConfig</RootNamespace>

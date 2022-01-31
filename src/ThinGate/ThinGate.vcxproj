@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{6B7687D5-F060-4443-ABCE-56F21ACB4D8F}</ProjectGuid>
     <RootNamespace>ThinGate</RootNamespace>
