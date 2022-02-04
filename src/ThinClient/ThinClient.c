@@ -102,6 +102,8 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 
 	InitProcessCallOnceEx(true);
 
+	MayaquaSetWin32ShowDiskSpaceWarningOnBoot(true);
+
 	InitMayaqua(false, false, 0, NULL);
 	InitCedar();
 	DUExec();
