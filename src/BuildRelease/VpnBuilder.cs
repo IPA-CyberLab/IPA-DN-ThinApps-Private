@@ -375,11 +375,11 @@ namespace BuildRelease
 			ReleaseDestDir = outputDir;
 		}
 
-		// Visual Studio 2019 の「VsDevCmd.bat」ファイルのパスを取得する
+		// Visual Studio 2022 の「VsDevCmd.bat」ファイルのパスを取得する
 		public static string GetVsDevCmdFilePath()
 		{
 			string vsWhere = Path.Combine(Paths.UltraBuildFilesDirName, @"Utility\vswhere.exe");
-            string args = @"-version [16.0,17.0) -sort -requires Microsoft.Component.MSBuild -find Common7\Tools\VsDevCmd.bat";
+            string args = @"-version [17.0,18.0) -sort -requires Microsoft.Component.MSBuild -find Common7\Tools\VsDevCmd.bat";
 
             using (Process p = new Process())
 			{
@@ -402,7 +402,7 @@ namespace BuildRelease
 				string line = r.ReadLine();
 				if (string.IsNullOrEmpty(line))
 				{
-					throw new Exception($"'{vsWhere}' returned error. Perhaps no Visual C++ 2019 installed directory found.");
+					throw new Exception($"'{vsWhere}' returned error. Perhaps no Visual C++ 2022 installed directory found.");
 				}
 
 				return line.Trim();
