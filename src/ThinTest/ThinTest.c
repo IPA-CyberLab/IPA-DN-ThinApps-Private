@@ -92,13 +92,69 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
-	CERT_SERVER_CLIENT_PARAM t = CLEAN;
+	if (false)
+	{
+		BUF* b = NewBuf();
 
-	StrCpy(t.CertListSrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.cer");
-	StrCpy(t.CertKeySrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.key");
-	StrCpy(t.BasicAuthUsername, 0, "user123");
-	StrCpy(t.BasicAuthPassword, 0, "pass123");
-	StrCpy(t.ManagerLogName, 0, "Nekosan");
+		//BufMsg(b, "Hello World %s %u", "Neko", 123);
+		//BufMsg(b, "Hello World %s %u", "Neko", 123);
+
+		BufDebug(b);
+
+		FreeBuf(b);
+		return;
+	}
+
+	if (true)
+	{
+		char *body_format =
+			"From: %s\r\nTo: %s\r\nSubject: TEST - %s\r\n\r\n"
+			"Your new One Time Password (OTP) code is:\r\n"
+			"%s\r\n\r\n"
+			"A client is attempting to connect to the server: %s.\r\n\r\n"
+			"The source IP address of the client is: %s\r\n\r\n";
+
+		char body[4096] = CLEAN;
+		UINT body_size = sizeof(body);
+
+		char *from = "xxx@gmail.com";
+		char *to = "xxx@outlook.com";
+
+		Format(body, body_size, body_format, from, to, "123", "123", "abc", "1.2.3.4");
+
+		BUF *error = NewBuf();
+		bool ret = SmtpSendMailEx("smtp.gmail.com",
+			587,
+			from,
+			to,
+			body,
+			error,
+			"xxx@gmail.com",
+			"xxx",
+			0,
+			SMTP_SSL_TYPE_STARTTLS,
+			SMTP_AUTH_TYPE_LOGIN);
+
+		Print("ret = %u\n", ret);
+
+		BufPrint(error);
+
+		FreeBuf(error);
+
+		return;
+	}
+
+	if (false)
+	{
+		CERT_SERVER_CLIENT_PARAM t = CLEAN;
+
+		StrCpy(t.CertListSrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.cer");
+		StrCpy(t.CertKeySrcUrl, 0, "https://ssl-cert-server.websocket.jp/wildcard_cert_files/websocket.jp/latest/cert.key");
+		StrCpy(t.BasicAuthUsername, 0, "user123");
+		StrCpy(t.BasicAuthPassword, 0, "pass123");
+		StrCpy(t.ManagerLogName, 0, "Nekosan");
+		return;
+	}
 }
 
 void gg(UINT num, char **arg)
