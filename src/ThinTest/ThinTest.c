@@ -92,6 +92,17 @@ static DS *dss = NULL;
 
 void test(UINT num, char **arg)
 {
+	if (true)
+	{
+		MIKAKA_DDNS *d = NewMikakaDDnsClient(NULL);
+
+		GetLine(NULL, 0);
+
+		FreeMikakaDDnsClient(d);
+
+		return;
+	}
+
 	if (false)
 	{
 		BUF* b = NewBuf();
