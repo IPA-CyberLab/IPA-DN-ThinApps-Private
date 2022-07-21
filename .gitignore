@@ -109,3 +109,4 @@ mayaqua.key
 /src/bin/backup.Statistics.db
 /src/bin/websocket_certs_cache
 /src/bin/webapp_certs_cache
+/src/bin/DDnsClient.ini
