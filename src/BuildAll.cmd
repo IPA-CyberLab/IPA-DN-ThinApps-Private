@@ -13,10 +13,22 @@ echo on
 del %BATCH_DIR_NAME%\bin\BuildRelease.exe
 
 msbuild /target:Clean /property:Configuration=Debug "%BATCH_DIR_NAME%\BuildRelease\BuildRelease.csproj"
+IF ERRORLEVEL 1 GOTO LABEL_ERROR
 
 msbuild /target:Rebuild /property:Configuration=Debug "%BATCH_DIR_NAME%\BuildRelease\BuildRelease.csproj"
+IF ERRORLEVEL 1 GOTO LABEL_ERROR
 
 copy /y "%BATCH_DIR_NAME%\BuildRelease\bin\BuildReleaseTmp.exe" "%BATCH_DIR_NAME%\bin\BuildRelease.exe"
+IF ERRORLEVEL 1 GOTO LABEL_ERROR
 
 cmd /k "%BATCH_DIR_NAME%\bin\BuildRelease.exe /CMD:All %1"
+IF ERRORLEVEL 1 GOTO LABEL_ERROR
+
+
+
+:LABEL_ERROR
+
+
+
+EXIT %ERRORLEVEL%
 
