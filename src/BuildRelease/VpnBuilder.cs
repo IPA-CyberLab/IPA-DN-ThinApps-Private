@@ -8,7 +8,7 @@
 // Copyright (c) Daiyuu Nobori.
 // Copyright (c) SoftEther VPN Project, University of Tsukuba, Japan.
 // Copyright (c) SoftEther Corporation.
-// Copyright (c) all contributors on IPA-DN-Ultra Library and SoftEther VPN Project in GitHub.
+// Copyright (c) all contributors on IPA-DN-ThinLib Library and SoftEther VPN Project in GitHub.
 // 
 // All Rights Reserved.
 // 
@@ -251,9 +251,9 @@ namespace BuildRelease
 		public static readonly string SolutionBaseDirName = IO.NormalizePath(Path.Combine(SolutionBinDirName, @"..\"));
 		public static readonly string UtilityDirName = IO.NormalizePath(Path.Combine(SolutionBinDirName, @"..\BuildFiles\Utility"));
 
-		public static readonly string UltraBaseDirName = IO.NormalizePath(Directory.Exists(Path.Combine(SolutionBinDirName, @"..\..\submodules\")) ? Path.Combine(SolutionBinDirName, @"..\..\submodules\IPA-DN-Ultra\src") : Path.Combine(SolutionBinDirName, @"..\"));
-		public static readonly string UltraBinDirName = IO.NormalizePath(Path.Combine(UltraBaseDirName, "bin"));
-		public static readonly string UltraBuildFilesDirName = IO.NormalizePath(Path.Combine(UltraBaseDirName, "BuildFiles"));
+		public static readonly string ThinLibBaseDirName = IO.NormalizePath(Directory.Exists(Path.Combine(SolutionBinDirName, @"..\..\submodules\")) ? Path.Combine(SolutionBinDirName, @"..\..\submodules\IPA-DN-ThinLib\src") : Path.Combine(SolutionBinDirName, @"..\"));
+		public static readonly string ThinLibBinDirName = IO.NormalizePath(Path.Combine(ThinLibBaseDirName, "bin"));
+		public static readonly string ThinLibBuildFilesDirName = IO.NormalizePath(Path.Combine(ThinLibBaseDirName, "BuildFiles"));
 
 		public static readonly string VisualStudioSolutionFileName;
 		//public static readonly string DebugSnapshotBaseDir;
@@ -269,7 +269,7 @@ namespace BuildRelease
 		public static readonly DateTime StartDateTime = DateTime.Now;
 		public static readonly string StartDateTimeStr;
 		public static readonly string CmdFileName;
-		public static readonly string ManifestsDir = Path.Combine(UltraBuildFilesDirName, "Manifests");
+		public static readonly string ManifestsDir = Path.Combine(ThinLibBuildFilesDirName, "Manifests");
 		public static readonly string XCopyExeFileName = Path.Combine(Env.SystemDir, "xcopy.exe");
 		public static readonly string ReleaseDir = Path.Combine(SolutionBaseDirName, @"tmp\Release");
 		public static readonly string ReleaseSrckitDir = Path.Combine(SolutionBaseDirName, @"tmp\ReleaseSrcKit");
@@ -378,7 +378,7 @@ namespace BuildRelease
 		// Visual Studio 2022 の「VsDevCmd.bat」ファイルのパスを取得する
 		public static string GetVsDevCmdFilePath()
 		{
-			string vsWhere = Path.Combine(Paths.UltraBuildFilesDirName, @"Utility\vswhere.exe");
+			string vsWhere = Path.Combine(Paths.ThinLibBuildFilesDirName, @"Utility\vswhere.exe");
             string args = @"-version [17.0,18.0) -sort -requires Microsoft.Component.MSBuild -find Common7\Tools\VsDevCmd.bat";
 
             using (Process p = new Process())
@@ -427,11 +427,11 @@ namespace BuildRelease
             return true;
         }
 
-        public static string GetUltraVersionLabel()
+        public static string GetThinLibVersionLabel()
         {
             string tmpPath = Paths.SolutionBaseDirName;
 
-            string readmePath = Path.Combine(tmpPath, @"..\submodules\IPA-DN-Ultra\README.md");
+            string readmePath = Path.Combine(tmpPath, @"..\submodules\IPA-DN-ThinLib\README.md");
 
             string[] lines = File.ReadAllLines(readmePath);
 
@@ -450,14 +450,14 @@ namespace BuildRelease
             return "Unknown";
         }
 
-        public static string GetUltraSubmoduleCommitId()
+        public static string GetThinLibSubmoduleCommitId()
         {
             string tmpPath = Paths.SolutionBaseDirName;
 
             // Get the HEAD contents
             while (true)
             {
-                string headFilename = Path.Combine(tmpPath, @".git\modules\submodules\IPA-DN-Ultra\HEAD");
+                string headFilename = Path.Combine(tmpPath, @".git\modules\submodules\IPA-DN-ThinLib\HEAD");
 
                 try
                 {
@@ -603,7 +603,7 @@ namespace BuildRelease
 		// Build Hamcore file
 		public static void BuildHamcore()
 		{
-			string srcDirNameBasic = Path.Combine(Paths.UltraBinDirName, "hamcore");
+			string srcDirNameBasic = Path.Combine(Paths.ThinLibBinDirName, "hamcore");
 			string srcDirNameAlternative = Path.Combine(Paths.SolutionBinDirName, "hamcore");
 			// Create the destination directory
 			string win32DestDir = Path.Combine(Paths.BuildHamcoreFilesDirName, "hamcore_win32");

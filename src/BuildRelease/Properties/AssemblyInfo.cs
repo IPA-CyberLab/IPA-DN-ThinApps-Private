@@ -2,11 +2,11 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("IPA Ultra Release Utility")]
+[assembly: AssemblyTitle("IPA ThinLib Release Utility")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IPA CyberLab")]
-[assembly: AssemblyProduct("IPA Ultra Release Utility")]
+[assembly: AssemblyProduct("IPA ThinLib Release Utility")]
 [assembly: AssemblyCopyright("Copyright (c) IPA CyberLab. All Rights Reserved.")]
 [assembly: AssemblyCulture("")]
 

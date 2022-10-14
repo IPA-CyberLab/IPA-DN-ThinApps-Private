@@ -8,7 +8,7 @@
 // Copyright (c) Daiyuu Nobori.
 // Copyright (c) SoftEther VPN Project, University of Tsukuba, Japan.
 // Copyright (c) SoftEther Corporation.
-// Copyright (c) all contributors on IPA-DN-Ultra Library and SoftEther VPN Project in GitHub.
+// Copyright (c) all contributors on IPA-DN-ThinLib Library and SoftEther VPN Project in GitHub.
 // 
 // All Rights Reserved.
 // 
@@ -124,7 +124,7 @@ namespace BuildRelease
 
             string exeFileName = Path.GetFileName(targetExeName);
 
-            exeFileName += " (Ultra: " + verLabel + ", " + commitId + ")";
+            exeFileName += " (ThinLib: " + verLabel + ", " + commitId + ")";
 
             if (Str.IsEmptyStr(product_name))
             {
@@ -190,7 +190,7 @@ namespace BuildRelease
 
         static string UpdateBuildName(string name)
         {
-            string verLabel = Paths.GetUltraVersionLabel();
+            string verLabel = Paths.GetThinLibVersionLabel();
             int i = name.IndexOf(".");
             if (i == -1) return verLabel;
 
@@ -326,7 +326,7 @@ namespace BuildRelease
 			string username = Env.UserName;
 			string pcname = Env.MachineName;
 
-			NormalizeSourceCode(build, version, username, pcname, date, Paths.GetUltraSubmoduleCommitId(), Paths.GetUltraVersionLabel());
+			NormalizeSourceCode(build, version, username, pcname, date, Paths.GetThinLibSubmoduleCommitId(), Paths.GetThinLibVersionLabel());
 		}
 
 		// Apply build number, version number, user name, and PC name to the source code
@@ -446,12 +446,12 @@ namespace BuildRelease
 										newLine = line.Replace(tokens[2], date.Second.ToString());
 									}
 
-                                    if (tokens[0].Equals("#define") && tokens[1].Equals("ULTRA_COMMIT_ID"))
+                                    if (tokens[0].Equals("#define") && tokens[1].Equals("THINLIB_COMMIT_ID"))
                                     {
                                         newLine = line.Replace(tokens[2], "\"" + commitId + "\"");
                                     }
 
-                                    if (tokens[0].Equals("#define") && tokens[1].Equals("ULTRA_VER_LABEL"))
+                                    if (tokens[0].Equals("#define") && tokens[1].Equals("THINLIB_VER_LABEL"))
                                     {
                                         newLine = line.Replace(tokens[2], "\"" + verLabel + "\"");
                                     }

@@ -1,6 +1,6 @@
 ﻿Copyright (c) IPA CyberLab of Industrial Cyber Security Center.
 Copyright (c) Nippon Telegraph and Telephone East Corporation.
-Copyright (c) all contributors on IPA-DN-Ultra Library and SoftEther VPN Project in GitHub.
+Copyright (c) all contributors on IPA-DN-ThinLib Library and SoftEther VPN Project in GitHub.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

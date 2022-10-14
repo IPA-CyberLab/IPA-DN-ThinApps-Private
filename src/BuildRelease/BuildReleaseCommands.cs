@@ -8,7 +8,7 @@
 // Copyright (c) Daiyuu Nobori.
 // Copyright (c) SoftEther VPN Project, University of Tsukuba, Japan.
 // Copyright (c) SoftEther Corporation.
-// Copyright (c) all contributors on IPA-DN-Ultra Library and SoftEther VPN Project in GitHub.
+// Copyright (c) all contributors on IPA-DN-ThinLib Library and SoftEther VPN Project in GitHub.
 // 
 // All Rights Reserved.
 // 
@@ -740,7 +740,7 @@ namespace BuildRelease
 			string companyname = vl["COMPANYNAME"].StrValue;
 
 			Win32BuildRelease.GenerateVersionInfoResource(targetFilename, outFilename, vl["RC"].StrValue, product_name, postfix,
-				Paths.GetUltraSubmoduleCommitId(), copyright, companyname, Paths.GetUltraVersionLabel());
+				Paths.GetThinLibSubmoduleCommitId(), copyright, companyname, Paths.GetThinLibVersionLabel());
 
 			return 0;
 		}

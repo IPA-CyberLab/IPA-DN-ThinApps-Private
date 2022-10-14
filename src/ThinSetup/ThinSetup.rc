@@ -54,9 +54,9 @@ END
 // remains consistent on all systems.
 IDI_SETUP_MAIN          ICON                    "App.ico"
 
-IDI_ICON12              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\deskclient.ico"
+IDI_ICON12              ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\deskclient.ico"
 
-IDI_ICON13              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\UserAdmin.ico"
+IDI_ICON13              ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\UserAdmin.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -139,7 +139,7 @@ END
 // AVI
 //
 
-1985                    AVI                     "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Circle.avi"
+1985                    AVI                     "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Circle.avi"
 
 #endif    // “ú–{Œê (“ú–{) resources
 /////////////////////////////////////////////////////////////////////////////
@@ -159,29 +159,29 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_SETUP_INTERNET      ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Internet.ico"
+IDI_SETUP_INTERNET      ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Internet.ico"
 
-IDI_SETUP_PROTOCOL      ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Protocol.ico"
+IDI_SETUP_PROTOCOL      ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Protocol.ico"
 
-IDI_SETUP_SWITCH        ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Switch.ico"
+IDI_SETUP_SWITCH        ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Switch.ico"
 
-IDI_SETUP_MACHINE       ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Machine.ico"
+IDI_SETUP_MACHINE       ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Machine.ico"
 
-IDI_ICON4               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\VPNSvr.ico"
+IDI_ICON4               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\VPNSvr.ico"
 
-IDI_ICON5               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\VPN.ico"
+IDI_ICON5               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\VPN.ico"
 
-IDI_ICON6               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Cascade.ico"
+IDI_ICON6               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Cascade.ico"
 
-IDI_ICON7               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\UserAdmin.ico"
+IDI_ICON7               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\UserAdmin.ico"
 
-IDI_ICON8               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Internet.ico"
+IDI_ICON8               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Internet.ico"
 
-IDI_ICON9               ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\Language.ico"
+IDI_ICON9               ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\Language.ico"
 
 IDI_ICON10              ICON                    "Installer.ico"
 
-IDI_ICON11              ICON                    "..\\..\\submodules\\IPA-DN-Ultra\\src\\PenCore\\EasyInstaller.ico"
+IDI_ICON11              ICON                    "..\\..\\submodules\\IPA-DN-ThinLib\\src\\PenCore\\EasyInstaller.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
