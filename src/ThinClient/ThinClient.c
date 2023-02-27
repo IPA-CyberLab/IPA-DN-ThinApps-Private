@@ -98,6 +98,8 @@
 // WinMain function
 int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 {
+	MayaquaSetWin32ShowDiskSpaceWarningOnBoot(true);
+
 	Vars_ApplyActivePatch();
 
 	InitProcessCallOnceEx(true);

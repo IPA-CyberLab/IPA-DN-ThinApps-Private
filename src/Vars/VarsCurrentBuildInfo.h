@@ -17,7 +17,7 @@
 #define	CEDAR_VER					22
 
 // Build Number
-#define	CEDAR_BUILD					9923
+#define	CEDAR_BUILD					9924
 
 // Specify the name of the person in charge building
 #ifndef	BUILDER_NAME
@@ -34,8 +34,8 @@
 #define	BUILD_DATE_M		2
 #define	BUILD_DATE_D		27
 #define	BUILD_DATE_HO		22
-#define	BUILD_DATE_MI		18
-#define	BUILD_DATE_SE		1
+#define	BUILD_DATE_MI		22
+#define	BUILD_DATE_SE		25
 
 // IPA-DN-ThinLib library git commit id
 #define THINLIB_COMMIT_ID		"2d3c4524f2cb4d4aacdd03e21c17ed1b6a017fc3"
