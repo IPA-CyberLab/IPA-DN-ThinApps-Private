@@ -110,3 +110,4 @@ mayaqua.key
 /src/bin/websocket_certs_cache
 /src/bin/webapp_certs_cache
 /src/bin/DDnsClient.ini
+/src/JSON/Schemas/Catalog
