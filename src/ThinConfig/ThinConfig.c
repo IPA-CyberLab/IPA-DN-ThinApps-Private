@@ -104,8 +104,6 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 
 	InitProcessCallOnceEx(true);
 
-	InitProcessCallOnceEx(true);
-
 	InitMayaqua(false, false, 0, NULL);
 	InitCedar();
 	DGExec();
