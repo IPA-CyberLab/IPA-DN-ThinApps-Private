@@ -261,7 +261,7 @@ void ping_test(UINT num, char **arg)
 
 	wide = WideClientStart("DESK", _GETLANG());
 
-	ret = WideClientConnect(wide, pcid, 0, 0, &sockio, 0, false);
+	ret = WideClientConnect(wide, pcid, 0, 0, &sockio, 0, false, NULL, 0);
 
 	if (ret != ERR_NO_ERROR)
 	{
