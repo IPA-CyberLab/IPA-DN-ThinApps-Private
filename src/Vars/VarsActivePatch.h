@@ -60,6 +60,9 @@ void Vars_ApplyActivePatch()
 	// インストーラで言語選択画面を表示するかどうか
 	Vars_ActivePatch_AddBool("ThinSetupShowLanguageSelectionDialog", false);
 
+	// クライアントアプリにおいてシン・ファイアウォールシステム機能を無効化する場合は true
+	Vars_ActivePatch_AddBool("DisableThinFirewallSystem", false);
+
 #ifdef _WIN32
 	Vars_ActivePatch_AddBitmap(D_ABOUT_BMP_ABOUTBOX, "AboutBox.bmp");
 	Vars_ActivePatch_AddBitmap(D_SW_PERFORM_BMP_ABOUTBOX, "AboutBox.bmp");
