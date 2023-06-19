@@ -111,3 +111,4 @@ mayaqua.key
 /src/bin/webapp_certs_cache
 /src/bin/DDnsClient.ini
 /src/JSON/Schemas/Catalog
+/src/bin/ThinFirewall_Config
