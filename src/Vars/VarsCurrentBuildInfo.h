@@ -14,10 +14,10 @@
 
 
 // Version number
-#define	CEDAR_VER					22
+#define	CEDAR_VER					23
 
 // Build Number
-#define	CEDAR_BUILD					9924
+#define	CEDAR_BUILD					9951
 
 // Specify the name of the person in charge building
 #ifndef	BUILDER_NAME
@@ -26,18 +26,18 @@
 
 // Specify the location to build
 #ifndef	BUILD_PLACE
-#define	BUILD_PLACE			"pc37"
+#define	BUILD_PLACE			"pc34"
 #endif	// BUILD_PLACE
 
 // Specifies the build date
 #define	BUILD_DATE_Y		2023
-#define	BUILD_DATE_M		2
-#define	BUILD_DATE_D		27
-#define	BUILD_DATE_HO		22
-#define	BUILD_DATE_MI		22
-#define	BUILD_DATE_SE		25
+#define	BUILD_DATE_M		6
+#define	BUILD_DATE_D		19
+#define	BUILD_DATE_HO		18
+#define	BUILD_DATE_MI		48
+#define	BUILD_DATE_SE		59
 
 // IPA-DN-ThinLib library git commit id
-#define THINLIB_COMMIT_ID		"2d3c4524f2cb4d4aacdd03e21c17ed1b6a017fc3"
-#define THINLIB_VER_LABEL		"rc1"
+#define THINLIB_COMMIT_ID		"d289dd0b21a406451cffe053a16c707d66be47d7"
+#define THINLIB_VER_LABEL		"rc2"
 
